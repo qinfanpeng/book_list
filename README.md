@@ -1,4 +1,4 @@
 book_list
 =========
 
-Demo with gulp, less, coffeescript, jade
+Demo with gulp, less, coffeescript, jade, bower
