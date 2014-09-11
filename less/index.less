@@ -1,0 +1,78 @@
+body {
+    background-color: rgb(240, 242, 243);
+    width: 80%;
+    margin: 0 auto;
+}
+
+@apple_blue: hsl(200, 100%, 40%);
+
+a {
+    color: @apple_blue;
+}
+
+.border-radius(@radius: 2px) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+}
+
+
+.transition {
+    transform: rotate(1deg) scale(1.3) translate(0);
+-webkit-transform: rotate(1deg) scale(1.3) translate(0);
+-moz-transform: rotate(1deg) scale(1.3) translate(0);
+-o-transform: rotate(1deg) scale(1.3) translate(0);
+-ms-transform: rotate(1deg) scale(1.3) translate(0);
+}
+
+#book_list {
+    .item {
+        
+        float: left;
+        list-style: none;
+        width: 170px;
+        height: 300px;
+        margin: 20px 15px;
+        border: 4px solid transparent;
+        display: none;
+
+        &:hover {
+            border: 4px solid @apple_blue;
+            .border-radius;
+            .cover {
+                img {
+                    .transition;        
+                }
+            }
+        }
+        .cover {
+           img {
+              width: 170px;
+           }
+        }
+    }
+}
+
+.pagination {
+    clear: both;
+    text-align: center;
+
+    .page_number {
+        margin: 0 5px;
+        padding: 0 5px;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .current_page {
+        cursor: not-allowed;
+        color: black;
+    }
+
+    .previous_page, .next_page {
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,72 @@
+doctype html
+html
+  head
+    title Book List Demo
+    link(href="./style/index.css", rel="stylesheet")
+    script(src='./script/jquery.min.js')
+    script(src='./script/pagination.js')
+
+  body
+    - books = [{cover_img_src: './images/1.jpg', title: '1453——君士坦丁堡的', autor: '[英]斯蒂文•朗西曼', address: 'http://book.douban.com/subject/25899496/?icn=index-editionrecommend'}, {cover_img_src: './images/2.jpg', title: '1453——君士坦丁堡的', autor: '[英]斯蒂文•朗西曼', address: 'http://book.douban.com/subject/25899496/?icn=index-editionrecommend'}, {cover_img_src: './images/3.jpg', title: '1453——君士坦丁堡的', autor: '[英]斯蒂文•朗西曼', address: 'http://book.douban.com/subject/25899496/?icn=index-editionrecommend'}, {cover_img_src: './images/4.jpg', title: '1453——君士坦丁堡的', autor: '[英]斯蒂文•朗西曼', address: 'http://book.douban.com/subject/25899496/?icn=index-editionrecommend'}, {cover_img_src: './images/5.jpg', title: '1453——君士坦丁堡的', autor: '[英]斯蒂文•朗西曼', address: 'http://book.douban.com/subject/25899496/?icn=index-editionrecommend'}, {cover_img_src: './images/6.jpg', title: '1453——君士坦丁堡的', autor: '[英]斯蒂文•朗西曼', address: 'http://book.douban.com/subject/25899496/?icn=index-editionrecommend'}, {cover_img_src: './images/7.jpg', title: '1453——君士坦丁堡的', autor: '[英]斯蒂文•朗西曼', address: 'http://book.douban.com/subject/25899496/?icn=index-editionrecommend'}, {cover_img_src: './images/8.jpg', title: '1453——君士坦丁堡的', autor: '[英]斯蒂文•朗西曼', address: 'http://book.douban.com/subject/25899496/?icn=index-editionrecommend'}, {cover_img_src: './images/1.jpg', title: '1453——君士坦丁堡的', autor: '[英]斯蒂文•朗西曼', address: 'http://book.douban.com/subject/25899496/?icn=index-editionrecommend'}, {cover_img_src: './images/2.jpg', title: '1453——君士坦丁堡的', autor: '[英]斯蒂文•朗西曼', address: 'http://book.douban.com/subject/25899496/?icn=index-editionrecommend'}, {cover_img_src: './images/3.jpg', title: '1453——君士坦丁堡的', autor: '[英]斯蒂文•朗西曼', address: 'http://book.douban.com/subject/25899496/?icn=index-editionrecommend'}, {cover_img_src: './images/4.jpg', title: '1453——君士坦丁堡的', autor: '[英]斯蒂文•朗西曼', address: 'http://book.douban.com/subject/25899496/?icn=index-editionrecommend'}, {cover_img_src: './images/5.jpg', title: '1453——君士坦丁堡的', autor: '[英]斯蒂文•朗西曼', address: 'http://book.douban.com/subject/25899496/?icn=index-editionrecommend'}, {cover_img_src: './images/6.jpg', title: '1453——君士坦丁堡的', autor: '[英]斯蒂文•朗西曼', address: 'http://book.douban.com/subject/25899496/?icn=index-editionrecommend'}, {cover_img_src: './images/7.jpg', title: '1453——君士坦丁堡的', autor: '[英]斯蒂文•朗西曼', address: 'http://book.douban.com/subject/25899496/?icn=index-editionrecommend'}, {cover_img_src: './images/8.jpg', title: '1453——君士坦丁堡的', autor: '[英]斯蒂文•朗西曼', address: 'http://book.douban.com/subject/25899496/?icn=index-editionrecommend'}];
+    ul#book_list
+      each book, index in books
+        li(class="item", id="item_#{index}")
+          .cover
+            a(href=book.address)
+              img(src=book.cover_img_src)
+          .info
+            a(href= book.address)= book.title
+            .autor= book.autor
+
+    .pagination    
+
+    script.
+      $(function() {
+        var pagination = new Pagination(".pagination", !{JSON.stringify(books)}, 6)
+        pagination.paging() 
+      });
+
+
+
+
+
+      
+
+        
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

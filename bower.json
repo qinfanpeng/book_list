@@ -1,0 +1,19 @@
+{
+  "name": "book_list",
+  "version": "0.0.0",
+  "description": "frontend dependences",
+  "authors": [
+    "qinfanpeng"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}
